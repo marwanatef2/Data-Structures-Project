@@ -36,6 +36,8 @@ int main() {
 			myGraph.closeness_centrality();
 		else
 			myGraph.degree_centrality();
+
+		cout << endl;
 	}
 
 	return 0;
