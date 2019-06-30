@@ -3,9 +3,10 @@
 #include <vector>
 #include <list>
 #include <iomanip>
+#include <fstream>
 void graph::shortest_Path_closeness(int source, vector<int> &shortest_distances)
 {
-    
+
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> p_queue;
 
     p_queue.push({0, source});
@@ -40,6 +41,8 @@ void graph::shortest_Path_closeness(int source, vector<int> &shortest_distances)
 void graph::closeness_centrality()
 {
 
+    ofstream myfile;
+    myfile.open("C:\\Users\\zez\\Desktop\\finalproject\\Data-Structures-Project\\centralityOutput.txt");
     float sum;
     for (int k = 0; k < this->nodes_no; ++k)
     {
@@ -53,5 +56,8 @@ void graph::closeness_centrality()
             sum += shortest_distances[i];
         }
         cout << setprecision(8) << (this->nodes_no - 1) / sum << endl;
+        myfile << setprecision(8) << (this->nodes_no - 1) / sum << endl;
     }
+    myfile << endl;
+    myfile.close();
 }

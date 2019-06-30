@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
 	// reading test cases from text file instead of terminal
 	ifstream input("testcases.txt");
@@ -30,9 +31,9 @@ int main() {
 
 		char centrality;
 		cin >> centrality;
-		if (centrality == 'b')
-			myGraph.betweeness_centrality();
-		else if (centrality == 'c')
+		// if (centrality == 'b')
+		// 	myGraph.betweeness_centrality();
+		if (centrality == 'c')
 			myGraph.closeness_centrality();
 		else
 			myGraph.degree_centrality();
