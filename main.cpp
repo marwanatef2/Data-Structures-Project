@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-
+	ofstream myfile;
+	myfile.open("C:\\Users\\zez\\Desktop\\finalproject\\Data-Structures-Project\\Grappph\\undirected.txt");
 	// reading test cases from text file instead of terminal
 	ifstream input("testcases.txt");
 	cin.rdbuf(input.rdbuf());
@@ -26,6 +27,7 @@ int main()
 		{
 			int vertex1, vertex2, edge_weight;
 			cin >> vertex1 >> vertex2 >> edge_weight;
+			myfile << vertex1 << " " << vertex2 << endl;
 			myGraph.add_edge(vertex1, vertex2, edge_weight);
 		}
 

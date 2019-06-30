@@ -42,7 +42,7 @@ void graph::closeness_centrality()
 {
 
     ofstream myfile;
-    myfile.open("C:\\Users\\zez\\Desktop\\finalproject\\Data-Structures-Project\\centralityOutput.txt");
+    myfile.open("C:\\Users\\zez\\Desktop\\finalproject\\Data-Structures-Project\\Grappph\\centralityOutput.txt");
     float sum;
     for (int k = 0; k < this->nodes_no; ++k)
     {
